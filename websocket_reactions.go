@@ -17,9 +17,13 @@ type ReactionEvent struct {
 	Item           ReactionItem `json:"item"`
 	Reaction       string       `json:"reaction"`
 	EventTimestamp string       `json:"event_ts"`
-	Added          bool         `json:"-"`
-	Removed        bool         `json:"-"`
 }
+
+// Type of ReactionEvent
+const (
+	ReactionAdded   = "reaction_added"
+	ReactionRemoved = "reaction_removed"
+)
 
 // // ReactionAddedEvent represents the Reaction added event
 // type ReactionAddedEvent ReactionEvent
