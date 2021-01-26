@@ -545,8 +545,8 @@ var EventMapping = map[string]interface{}{
 	"star_added":   StarAddedEvent{},
 	"star_removed": StarRemovedEvent{},
 
-	"reaction_added":   ReactionEvent{},
-	"reaction_removed": ReactionEvent{},
+	"reaction_added":   ReactionEvent{Added: true, Removed: false},
+	"reaction_removed": ReactionEvent{Added: false, Removed: true},
 
 	"pref_change": PrefChangeEvent{},
 
